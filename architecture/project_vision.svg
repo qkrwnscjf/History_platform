@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.05" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)" />
+  
+  <!-- Header -->
+  <rect x="40" y="40" width="720" height="80" rx="16" fill="#ffffff" filter="url(#shadow)" />
+  <text x="80" y="88" font-family="sans-serif" font-size="28" font-weight="bold" fill="#1e293b">History Map Engine</text>
+  <text x="80" y="110" font-family="sans-serif" font-size="14" fill="#64748b">프로젝트 기획안 및 최종 구현 전략 (Project Vision &amp; Strategy)</text>
+  
+  <!-- Section 1: Project Goal -->
+  <rect x="40" y="150" width="340" height="200" rx="16" fill="#ffffff" filter="url(#shadow)" />
+  <text x="70" y="190" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2563eb">1. 최종 달성 목표</text>
+  <text x="70" y="230" font-family="sans-serif" font-size="13" fill="#334155">
+    <tspan x="70" dy="0">"시공간을 넘나드는 직관적 역사 교육 플랫폼"</tspan>
+    <tspan x="70" dy="24">- 방대한 역사 데이터를 지도(공간)와 타임라인(시간) 위에</tspan>
+    <tspan x="70" dy="20">  시각화하여 입체적인 학습 경험 제공</tspan>
+    <tspan x="70" dy="24">- 미니멀리즘 UX: 학습자의 몰입을 방해하지 않는</tspan>
+    <tspan x="70" dy="20">  애플/구글 감성의 심플한 UI 구현</tspan>
+    <tspan x="70" dy="24">- 완전 자동화: 클릭 한 번으로 배포부터 데이터</tspan>
+    <tspan x="70" dy="20">  수집까지 완료되는 Docker 기반 인프라 구축</tspan>
+  </text>
+
+  <!-- Section 2: Core Philosophy -->
+  <rect x="420" y="150" width="340" height="200" rx="16" fill="#ffffff" filter="url(#shadow)" />
+  <text x="450" y="190" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2563eb">2. 핵심 설계 철학</text>
+  <text x="450" y="230" font-family="sans-serif" font-size="13" fill="#334155">
+    <tspan x="450" dy="0">📌 Data-Driven (데이터 중심)</tspan>
+    <tspan x="465" dy="20">다양한 출처(Wiki)의 비정형 데이터를 정형화</tspan>
+    <tspan x="450" dy="28">📌 Performance First (성능 최적화)</tspan>
+    <tspan x="465" dy="20">비동기 백엔드와 SVG 벡터 지도로 로딩 최소화</tspan>
+    <tspan x="450" dy="28">📌 Aesthetic UX (심미적 사용자 경험)</tspan>
+    <tspan x="465" dy="20">정보의 과잉을 막고, 여백과 애니메이션을</tspan>
+    <tspan x="465" dy="20">활용한 세련된 상호작용 제공</tspan>
+  </text>
+
+  <!-- Section 3: Implementation Strategy -->
+  <rect x="40" y="380" width="720" height="180" rx="16" fill="#ffffff" filter="url(#shadow)" />
+  <text x="70" y="420" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2563eb">3. 단계별 구현 전략</text>
+  
+  <rect x="70" y="445" width="200" height="80" rx="8" fill="#f1f5f9" />
+  <text x="170" y="475" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Phase 1: Foundation</text>
+  <text x="170" y="495" font-family="sans-serif" font-size="11" fill="#64748b" text-anchor="middle">Docker 인프라 &amp; 기본 API 구축</text>
+  <text x="170" y="510" font-family="sans-serif" font-size="11" fill="#64748b" text-anchor="middle">(현재 완료)</text>
+
+  <rect x="300" y="445" width="200" height="80" rx="8" fill="#eff6ff" />
+  <text x="400" y="475" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">Phase 2: UX Refinement</text>
+  <text x="400" y="495" font-family="sans-serif" font-size="11" fill="#3b82f6" text-anchor="middle">벡터 맵 &amp; 플로팅 UI 고도화</text>
+  <text x="400" y="510" font-family="sans-serif" font-size="11" fill="#3b82f6" text-anchor="middle">(현재 진행 중)</text>
+
+  <rect x="530" y="445" width="200" height="80" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-dasharray="4" />
+  <text x="630" y="475" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Phase 3: Expansion</text>
+  <text x="630" y="495" font-family="sans-serif" font-size="11" fill="#64748b" text-anchor="middle">대규모 데이터 소스 통합 및</text>
+  <text x="630" y="510" font-family="sans-serif" font-size="11" fill="#64748b" text-anchor="middle">LLM 기반 교육 요약 적용</text>
+</svg>

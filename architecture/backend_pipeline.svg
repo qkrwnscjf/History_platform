@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.05" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)" />
+  
+  <rect x="40" y="40" width="720" height="80" rx="16" fill="#ffffff" filter="url(#shadow)" />
+  <text x="80" y="88" font-family="sans-serif" font-size="28" font-weight="bold" fill="#1e293b">Backend Pipeline</text>
+  <text x="80" y="110" font-family="sans-serif" font-size="14" fill="#64748b">백엔드 데이터 파이프라인 및 확장 계획</text>
+  
+  <!-- Current Pipeline -->
+  <rect x="40" y="150" width="720" height="150" rx="16" fill="#ffffff" filter="url(#shadow)" />
+  <text x="70" y="185" font-family="sans-serif" font-size="16" font-weight="bold" fill="#10b981">현재 데이터 파이프라인 (Auto-Seeding)</text>
+  
+  <!-- Flow Diagram -->
+  <rect x="70" y="210" width="140" height="60" rx="8" fill="#f1f5f9" />
+  <text x="140" y="245" font-family="sans-serif" font-size="13" font-weight="bold" fill="#334155" text-anchor="middle">Wikipedia API</text>
+  
+  <text x="230" y="245" font-family="sans-serif" font-size="20" fill="#94a3b8">➔</text>
+  
+  <rect x="270" y="210" width="180" height="60" rx="8" fill="#f1f5f9" />
+  <text x="360" y="238" font-family="sans-serif" font-size="13" font-weight="bold" fill="#334155" text-anchor="middle">Python Scraper</text>
+  <text x="360" y="255" font-family="sans-serif" font-size="10" fill="#64748b" text-anchor="middle">(Geocoding &amp; Parsing)</text>
+
+  <text x="470" y="245" font-family="sans-serif" font-size="20" fill="#94a3b8">➔</text>
+
+  <rect x="510" y="210" width="140" height="60" rx="8" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="580" y="238" font-family="sans-serif" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">MongoDB</text>
+  <text x="580" y="255" font-family="sans-serif" font-size="10" fill="#047857" text-anchor="middle">(GeoJSON &amp; Text Index)</text>
+
+  <!-- Future Plans -->
+  <rect x="40" y="320" width="720" height="240" rx="16" fill="#ffffff" filter="url(#shadow)" />
+  <text x="70" y="360" font-family="sans-serif" font-size="16" font-weight="bold" fill="#8b5cf6">추후 데이터 확장 계획 (Data Strategy)</text>
+
+  <text x="70" y="400" font-family="sans-serif" font-size="13" fill="#334155">
+    <tspan x="70" dy="0">📚 나무위키(Namuwiki) 데이터 통합 전략</tspan>
+    <tspan x="85" dy="20">- 한계: 공식 API 부재로 단순 크롤링이 어려움.</tspan>
+    <tspan x="85" dy="20">- 해결책: Namuwiki Database Dump 파일을 다운로드 및 파싱하는 배치 작업 구축.</tspan>
+    <tspan x="85" dy="20">- 좌표 변환: 텍스트에서 지명을 추출한 후, OpenStreetMap 등으로 좌표(Geo) 획득.</tspan>
+    
+    <tspan x="70" dy="35">🤖 LLM 기반 자동 요약 &amp; 교육 데이터 정제</tspan>
+    <tspan x="85" dy="20">- 수집된 텍스트를 OpenAI API에 통과시켜 맞춤형 요약 및 '역사적 의의' 자동 생성.</tspan>
+    
+    <tspan x="70" dy="35">⚡ 고성능 검색 엔진 도입</tspan>
+    <tspan x="85" dy="20">- 데이터 급증 시, Elasticsearch를 연동하여 형태소 분석 기반 고도화된 검색 구현.</tspan>
+  </text>
+</svg>

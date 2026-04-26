@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: history-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - history-network
+
+  backend:
+    build: ./backend
+    container_name: history-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_DETAILS=mongodb://mongodb:27017
+      - DB_NAME=history_map
+    depends_on:
+      - mongodb
+    networks:
+      - history-network
+    restart: always
+
+  frontend:
+    build: ./frontend
+    container_name: history-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    networks:
+      - history-network
+
+networks:
+  history-network:
+    driver: bridge
+
+volumes:
+  mongo_data:
