@@ -1,0 +1,14 @@
+server:
+  port: 8000
+
+spring:
+  data:
+    mongodb:
+      uri: ${MONGO_DETAILS:mongodb://localhost:27017}
+      database: ${DB_NAME:history_map}
+  main:
+    allow-circular-references: true
+
+logging:
+  level:
+    com.historymap.backend: DEBUG

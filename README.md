@@ -29,15 +29,15 @@
 - **Docker & Docker Compose:** 서비스 컨테이너화 및 원클릭 오케스트레이션.
 
 ### Backend (Data & API)
-- **FastAPI:** 고성능 비동기 Python 웹 프레임워크.
-- **MongoDB:** GeoJSON 공간 쿼리 및 Full-text Search를 위한 NoSQL DB.
-- **Motor:** MongoDB 비동기 인터랙션 드라이버.
-- **Python Scraper:** 위키피디아 검색 및 카테고리 기반 데이터 크롤링 엔진.
+- **Java 17 & Spring Boot 3.x:** 엔터프라이즈급 안정성과 확장성을 갖춘 백엔드 프레임워크.
+- **Spring Data MongoDB:** GeoJSON 공간 쿼리 및 Full-text Search를 위한 강력한 데이터 추상화 계층.
+- **Spring WebFlux (WebClient):** 위키피디아 API와의 비동기 통신 및 대규모 데이터 스트리밍 수집.
+- **Java BFS Scraper:** 위키피디아 카테고리 계층을 탐색하여 전 세계 역사적 사건을 수집하는 재귀적 크롤링 엔진.
 
 ### Frontend (UI/UX)
 - **React (Vite):** 빠르고 현대적인 프론트엔드 빌드 도구.
 - **Tailwind CSS:** 유틸리티 우선의 세련된 UI 스타일링.
-- **Leaflet & React-Leaflet:** 오픈 소스 지도 라이브러리 및 커스텀 마커 클러스터링.
+- **Leaflet & React-Leaflet:** 인터랙티브 맵 엔진 및 `flyTo` 기반의 부드러운 위치 이동.
 - **Lucide Icons:** 직관적인 교육용 벡터 아이콘 시스템.
 
 ## 4. 실행 방법 (Quick Start)
@@ -58,4 +58,4 @@ docker-compose up -d --build
 
 ---
 
-**최종 업데이트 날짜:** 2026년 4월 3일 금요일
+**최종 업데이트 날짜:** 2026년 5월 11일 월요일

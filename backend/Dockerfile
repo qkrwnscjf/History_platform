@@ -1,6 +1,12 @@
-FROM python:3.11-slim
+# Build stage
+FROM gradle:8.5-jdk17 AS build
 WORKDIR /app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-CMD python scraper.py & uvicorn main:app --host 0.0.0.0 --port 8000
+RUN gradle build --no-daemon -x test
+
+# Run stage
+FROM eclipse-temurin:17-jre
+WORKDIR /app
+COPY --from=build /app/build/libs/*.jar app.jar
+EXPOSE 8000
+ENTRYPOINT ["java", "-jar", "app.jar"]
